@@ -28,6 +28,10 @@ else:
     if (4 < thour <= 6) or (thour == 4 and tmin != 0):
         price = 20*(thour-3) + 30
         price += 20 if tmin != 0 else 0
+    if (1 < thour <= 3) or (thour == 4 and tmin != 0):
+        tmin = 0
+        price = 20*(thour-3) + 30
+        thour += 1
     if thour > 6 or (thour == 6 and tmin != 0):
         price = 300
     
